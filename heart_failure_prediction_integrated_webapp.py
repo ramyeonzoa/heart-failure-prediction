@@ -158,6 +158,7 @@ def batch_prediction():
             df.insert(0, 'Prediction', predictions)
             df.insert(1, 'Probability', probs)
 
+            st.markdown("---")
             st.write("**예측 결과**", df)
 
             csv = df.to_csv(index=False)
